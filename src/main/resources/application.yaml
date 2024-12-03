@@ -1,0 +1,41 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/hotel-booking?createDatabaseIfNotExist=true"
+#    url: "jdbc:mysql://autorack.proxy.rlwy.net:14203/railway"
+    #    url: "jdbc:mysql://root:dgkbdwLDeXoBolWahtcBZnLqAiMIMqBA@mysql.railway.internal:3306/railway"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    username: root
+    password: root
+#    password: dgkbdwLDeXoBolWahtcBZnLqAiMIMqBA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "uteshop1243@gmail.com"
+    password: "cadd avee jekq igzt"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  signerKey: "lfpXqYyIy0y/rjz2oU8Go7lo5a2EBdUEAbCa/jN9XcnejLa7sJ+N9RvNsUUNoJq2"
+  valid-duration: 3600 # in second
+  refreshable-duration: 36000 # in seconds
+
+#VNPay
+vnp:
+  TmnCode: LWWJA8MJ
+  HashSecret: Z8G7LA20XI2ZHSKJ71ZSE158M543DR1X
+  Url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+  ReturnUrl: http://localhost:8080/api/VnPay/callback
+
