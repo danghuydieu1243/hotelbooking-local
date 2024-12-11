@@ -4,7 +4,7 @@ server:
     context-path: /api
 spring:
   datasource:
-    url: "jdbc:mysql://localhost:3306/hotel-booking?createDatabaseIfNotExist=true"
+    url: "jdbc:mysql://localhost:3306/hotelbooking?createDatabaseIfNotExist=true"
 #    url: "jdbc:mysql://autorack.proxy.rlwy.net:14203/railway"
     #    url: "jdbc:mysql://root:dgkbdwLDeXoBolWahtcBZnLqAiMIMqBA@mysql.railway.internal:3306/railway"
     driverClassName: "com.mysql.cj.jdbc.Driver"
